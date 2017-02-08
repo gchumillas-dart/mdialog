@@ -3,6 +3,8 @@ library modal_dialog;
 import 'dart:async';
 
 import 'src/core.dart';
+import 'src/dialog/modal_alert.dart';
+import 'src/dialog/modal_confirm.dart';
 
 export 'src/core.dart';
 
