@@ -23,6 +23,8 @@ class ModalWindow {
   }
 
   void close() {
-    _container.empty();
+    _container
+      ..attr['class'] = 'modal-window-container'
+      ..empty();
   }
 }
