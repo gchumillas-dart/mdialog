@@ -3,8 +3,12 @@ part of modal_dialog.src;
 class ModalBlock {
   DomElement _element;
 
-  ModalBlock() {
+  ModalBlock([String className]) {
     _element = $('<div class="modal-window-block" />');
+
+    if (className != null) {
+      element.addClass(className);
+    }
   }
 
   DomElement get element => _element;

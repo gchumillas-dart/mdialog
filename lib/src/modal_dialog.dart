@@ -32,21 +32,16 @@ class ModalDialog {
   ModalDialog(this.title, this.message) {
     modalWindow.close();
 
-    final header = new ModalBlock();
-    header.element
-      ..addClass('header')
-      ..text = title;
+    final header = new ModalBlock('header');
+    header.element.text = title;
     modalWindow.add(header);
 
-    final body = new ModalBlock();
-    body.element
-      ..addClass('body')
-      ..text = message;
+    final body = new ModalBlock('body');
+    body.element.text = message;
     modalWindow.add(body);
 
-    final footer = new ModalBlock();
+    final footer = new ModalBlock('footer');
     _footer = footer.element;
-    _footer.addClass('footer');
     modalWindow.add(footer);
   }
 
