@@ -2,11 +2,11 @@ library modal_dialog;
 
 import 'dart:async';
 
-import 'src/core.dart';
+import 'src/modal_window.dart';
 import 'src/dialog/modal_alert.dart';
 import 'src/dialog/modal_confirm.dart';
 
-export 'src/core.dart';
+export 'src/modal_window.dart';
 
 /// Closes the modal window.
 void close() => modalWindow.close();

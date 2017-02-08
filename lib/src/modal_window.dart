@@ -1,4 +1,8 @@
-part of modal_dialog.src;
+import 'package:domelement/core.dart';
+
+import 'modal_block.dart';
+
+final ModalWindow modalWindow = new ModalWindow();
 
 // TODO: reemplazar "modal-window" por algo más complejo para evitar interferencias
 class ModalWindow {

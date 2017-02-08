@@ -1,4 +1,4 @@
-import 'package:modal_dialog/src/core.dart' show modalWindow;
+import 'package:modal_dialog/src/modal_window.dart';
 
 import 'modal_dialog.dart';
 

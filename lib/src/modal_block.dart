@@ -1,4 +1,4 @@
-part of modal_dialog.src;
+import 'package:domelement/core.dart';
 
 class ModalBlock {
   DomElement _element;

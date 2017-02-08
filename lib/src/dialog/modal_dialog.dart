@@ -1,5 +1,6 @@
 import 'package:domelement/core.dart';
-import 'package:modal_dialog/src/core.dart';
+import 'package:modal_dialog/src/modal_block.dart';
+import 'package:modal_dialog/src/modal_window.dart';
 
 class ModalDialog {
   final String title;
