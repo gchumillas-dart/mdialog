@@ -18,6 +18,8 @@ class ModalWindow {
   DomElement get element => _element;
   DomElement get container => _container;
 
+  void addClass(String className) => _container.addClass(className);
+
   void add(ModalBlock block) {
     _container.addElement(block.element);
   }
