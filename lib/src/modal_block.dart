@@ -8,4 +8,6 @@ class ModalBlock {
   }
 
   DomElement get element => _element;
+
+  void addClass(String className) => _element.addClass(className);
 }
