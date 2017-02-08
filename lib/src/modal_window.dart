@@ -10,9 +10,7 @@ class ModalWindow {
       ..addClass('modal-window')
       ..addTo(find('body'));
 
-    _container = $('<div />')
-      ..addClass('modal-window-container')
-      ..addTo(_element);
+    close();
   }
 
   DomElement get element => _element;
@@ -25,8 +23,13 @@ class ModalWindow {
   }
 
   void close() {
-    _container
-      ..attr['class'] = 'modal-window-container'
-      ..empty();
+    if (_container != null) {
+      _container.remove();
+    }
+
+    // TODO: do not repeat yourself
+    _container = $('<div />')
+      ..addClass('modal-window-container')
+      ..addTo(_element);
   }
 }
