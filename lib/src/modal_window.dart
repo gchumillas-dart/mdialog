@@ -21,4 +21,8 @@ class ModalWindow {
   void add(ModalBlock block) {
     _container.addElement(block.element);
   }
+
+  void close() {
+    _container.empty();
+  }
 }

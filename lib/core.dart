@@ -9,6 +9,9 @@ export 'src/core.dart';
 /// Gets the current modal window instance.
 final ModalWindow modalWindow = new ModalWindow();
 
+/// Closes the modal window.
+void close() => modalWindow.close();
+
 /// Shows an alert dialog with a [message] and a [title].
 ///
 /// For example:
@@ -19,7 +22,7 @@ final ModalWindow modalWindow = new ModalWindow();
 Future<Null> alert(String message, {String title}) {
   final c = new Completer();
 
-  modalWindow.container.empty();
+  close();
   new ModalAlert(modalWindow, title ?? 'Alert', message,
       accept: () => c.isCompleted || c.complete());
   return c.future;
@@ -36,7 +39,7 @@ Future<Null> alert(String message, {String title}) {
 Future<bool> confirm(String message, {String title}) {
   final c = new Completer();
 
-  modalWindow.container.empty();
+  close();
   new ModalConfirm(modalWindow, title ?? 'Confirm', message,
       accept: () => c.isCompleted || c.complete(true),
       cancel: () => c.isCompleted || c.complete(false));
