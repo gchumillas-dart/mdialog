@@ -5,14 +5,17 @@ import 'package:modal_dialog/src/modal_window.dart';
 class ModalDialog {
   final String title;
   final String message;
+  ModalWindow _modalWindow;
   ModalBlock _footer;
 
   ModalDialog(this.title, this.message) {
-    modalWindow.close();
-    modalWindow.add(new ModalBlock('header')..text = title);
-    modalWindow.add(new ModalBlock('body')..text = message);
-    modalWindow.add(_footer = new ModalBlock('footer'));
+    _modalWindow = new ModalWindow();
+    _modalWindow.add(new ModalBlock('header')..text = title);
+    _modalWindow.add(new ModalBlock('body')..text = message);
+    _modalWindow.add(_footer = new ModalBlock('footer'));
   }
+
+  ModalWindow get modalWindow => _modalWindow;
 
   DomElement addButton(String label) {
     return $('<button type="button" />')

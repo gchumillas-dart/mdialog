@@ -2,14 +2,11 @@ library modal_dialog;
 
 import 'dart:async';
 
-import 'src/modal_window.dart';
 import 'src/dialog/modal_alert.dart';
 import 'src/dialog/modal_confirm.dart';
 
+export 'src/modal_block.dart';
 export 'src/modal_window.dart';
-
-/// Closes the modal window.
-void close() => modalWindow.close();
 
 /// Shows an alert dialog with a [message] and a [title].
 ///
@@ -21,7 +18,6 @@ void close() => modalWindow.close();
 Future<Null> alert(String message, {String title}) {
   final c = new Completer();
 
-  close();
   new ModalAlert(title ?? 'Alert', message,
       accept: () => c.isCompleted || c.complete());
   return c.future;
@@ -38,7 +34,6 @@ Future<Null> alert(String message, {String title}) {
 Future<bool> confirm(String message, {String title}) {
   final c = new Completer();
 
-  close();
   new ModalConfirm(title ?? 'Confirm', message,
       accept: () => c.isCompleted || c.complete(true),
       cancel: () => c.isCompleted || c.complete(false));

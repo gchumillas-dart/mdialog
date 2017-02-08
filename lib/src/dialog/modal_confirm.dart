@@ -1,5 +1,3 @@
-import 'package:modal_dialog/src/modal_window.dart';
-
 import 'modal_alert.dart';
 
 class ModalConfirm extends ModalAlert {

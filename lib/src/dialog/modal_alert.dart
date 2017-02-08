@@ -1,5 +1,3 @@
-import 'package:modal_dialog/src/modal_window.dart';
-
 import 'modal_dialog.dart';
 
 class ModalAlert extends ModalDialog {

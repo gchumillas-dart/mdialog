@@ -2,19 +2,24 @@ import 'package:domelement/core.dart';
 
 import 'modal_block.dart';
 
-final ModalWindow modalWindow = new ModalWindow();
-
 // TODO: reemplazar "modal-window" por algo más complejo para evitar interferencias
 class ModalWindow {
+  static ModalWindow _instance;
   DomElement _element;
   DomElement _container;
 
-  ModalWindow() {
+  factory ModalWindow() {
+    if (_instance == null) {
+      _instance = new ModalWindow._internal();
+    }
+
+    return _instance..close();
+  }
+
+  ModalWindow._internal() {
     _element = $('<div />')
       ..addClass('modal-window')
       ..addTo(find('body'));
-
-    close();
   }
 
   DomElement get element => _element;
@@ -31,7 +36,6 @@ class ModalWindow {
       _container.remove();
     }
 
-    // TODO: do not repeat yourself
     _container = $('<div />')
       ..addClass('modal-window-container')
       ..addTo(_element);
