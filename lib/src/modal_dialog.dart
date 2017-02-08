@@ -27,29 +27,18 @@ class ModalConfirm extends ModalAlert {
 class ModalDialog {
   final String title;
   final String message;
-  DomElement _footer;
+  ModalBlock _footer;
 
   ModalDialog(this.title, this.message) {
     modalWindow.close();
-
-    final header = new ModalBlock('header');
-    header.element.text = title;
-    modalWindow.add(header);
-
-    final body = new ModalBlock('body');
-    body.element.text = message;
-    modalWindow.add(body);
-
-    final footer = new ModalBlock('footer');
-    _footer = footer.element;
-    modalWindow.add(footer);
+    modalWindow.add(new ModalBlock('header')..text = title);
+    modalWindow.add(new ModalBlock('body')..text = message);
+    modalWindow.add(_footer = new ModalBlock('footer'));
   }
 
   DomElement addButton(String label) {
     return $('<button type="button" />')
       ..text = label
-      ..addTo(_footer);
+      ..addTo(_footer.element);
   }
-
-  void close() {}
 }
