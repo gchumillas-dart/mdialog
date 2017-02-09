@@ -49,7 +49,7 @@ class ModalDialog {
       ..addTo(_footer.element);
 
     if (action != null) {
-      btn..on('click', () => Function.apply(action, [this]));
+      btn.on('click', () => Function.apply(action, [this]));
     }
 
     return btn;
