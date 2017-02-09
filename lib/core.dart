@@ -1,3 +1,4 @@
+/// Provides a set of modal dialog functions and classes.
 library modal_dialog;
 
 import 'dart:async';
@@ -13,7 +14,7 @@ export 'src/modal_window.dart';
 
 /// Shows an alert dialog with a [message] and a [title].
 ///
-/// For example:
+/// Example:
 ///
 ///     await alert('Something went wrong!');
 ///     print("Ok, you've been alerted");
@@ -32,7 +33,7 @@ Future<Null> alert(String message, {String title}) {
 
 /// Shows a confirm dialog with a [message] and a [title].
 ///
-/// For example:
+/// Example:
 ///
 ///     if (await confirm('Are you sure?')) {
 ///       print('Your whishes are my orders');

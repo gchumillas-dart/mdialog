@@ -1,8 +1,9 @@
 import 'modal_alert.dart';
 
-/// Represents a modal confirm dialog.
+/// Modal confirm dialog.
 class ModalConfirm extends ModalAlert {
   /// Creates a modal confirm dialog with a [title] and a [message].
+  ///
   /// When the user presses the `Accept` or the `Cancel` button, it calls the
   /// [accept] or the [cancel] function respectively.
   ///

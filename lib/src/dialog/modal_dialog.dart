@@ -2,7 +2,7 @@ import 'package:domelement/core.dart';
 import 'package:modal_dialog/src/modal_block.dart';
 import 'package:modal_dialog/src/modal_window.dart';
 
-/// Represents a modal dialog.
+/// Modal dialog.
 class ModalDialog {
   /// Dialog title
   final String title;
@@ -33,7 +33,7 @@ class ModalDialog {
     _modalWindow.add(_footer = new ModalBlock('footer'));
   }
 
-  /// Gets the modal window instance.
+  /// Modal window instance.
   ModalWindow get modalWindow => _modalWindow;
 
   /// Adds a button with a [label].

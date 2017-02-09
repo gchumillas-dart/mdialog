@@ -1,6 +1,6 @@
 import 'package:domelement/core.dart';
 
-/// Represents a block inside a modal dialog.
+/// Block inside a modal dialog.
 class ModalBlock {
   DomElement _element;
 
@@ -13,13 +13,13 @@ class ModalBlock {
     }
   }
 
-  /// Gets the element instance.
+  /// The underlying element of the block.
   DomElement get element => _element;
 
   /// Adds a [className] to the block.
   void addClass(String className) => _element.addClass(className);
 
-  /// Element text.
+  /// Block text.
   String get text => _element.text;
   set text(String value) {
     _element.text = value;
