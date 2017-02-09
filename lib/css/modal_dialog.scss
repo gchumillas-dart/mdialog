@@ -1,0 +1,13 @@
+.modal-dialog {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+
+  .modal-dialog-container {
+    display: inline-flex;
+    flex-direction: column;
+  }
+}
