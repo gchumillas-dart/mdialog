@@ -23,6 +23,13 @@ class ModalBlock {
     _element.text = value;
   }
 
+  /// Inner html.
+  String get html => _element.html;
+
+  set html(String value) {
+    _element.html = value;
+  }
+
   /// Adds a [className] to the block.
   void addClass(String className) => _element.addClass(className);
 }
