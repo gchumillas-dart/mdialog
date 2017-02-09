@@ -16,12 +16,13 @@ class ModalBlock {
   /// The underlying element of the block.
   DomElement get element => _element;
 
-  /// Adds a [className] to the block.
-  void addClass(String className) => _element.addClass(className);
-
   /// Block text.
   String get text => _element.text;
+
   set text(String value) {
     _element.text = value;
   }
+
+  /// Adds a [className] to the block.
+  void addClass(String className) => _element.addClass(className);
 }

@@ -34,19 +34,19 @@ class ModalWindow {
       ..addTo(find('body'));
   }
 
-  /// The underlying element of the window.
-  DomElement get element => _element;
-
   /// The undeerlying element of the window's container.
   DomElement get container => _container;
 
-  /// Adds a [className] to the container element.
-  void addClass(String className) => _container.addClass(className);
+  /// The underlying element of the window.
+  DomElement get element => _element;
 
   /// Adds a [block] to the container.
   void add(ModalBlock block) {
     _container.addElement(block.element);
   }
+
+  /// Adds a [className] to the container element.
+  void addClass(String className) => _container.addClass(className);
 
   /// Closes the modal window.
   void close() {
