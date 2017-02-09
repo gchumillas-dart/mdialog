@@ -11,8 +11,7 @@ $header-bg-color: #337ab7;
   @include box-shadow(rgba(0, 0, 0, .75) 0 $padding (4 * $padding) 0);
   background: $bg-color;
   border-radius: 2 * $padding;
-  margin-top: 48px;
-  min-width: 200px;
+  margin: 16px;
   overflow: hidden;
 }
 
@@ -34,5 +33,14 @@ $header-bg-color: #337ab7;
     button {
       margin: 0 $padding;
     }
+  }
+}
+
+// Styles for large screens
+@media (min-width: 640px) {
+  .modal-dialog-container {
+    display: inline-flex;
+    margin-top: 48px;
+    min-width: 250px;
   }
 }
