@@ -37,9 +37,17 @@ class ModalDialog {
   ModalWindow get modalWindow => _modalWindow;
 
   /// Adds a button with a [label].
-  DomElement addButton(String label) {
-    return $('<button type="button" />')
+  ///
+  /// When the user presses the button, it calls the [action] function.
+  DomElement addButton(String label, [_Callback action]) {
+    final btn = $('<button type="button" />')
       ..text = label
       ..addTo(_footer.element);
+
+    if (action != null) {
+      btn..on('click', () => Function.apply(action, [this]));
+    }
+
+    return btn;
   }
 }

@@ -16,11 +16,7 @@ class ModalAlert extends ModalDialog {
   ///
   ModalAlert(String title, String message, {_Callback accept})
       : super(title, message) {
-    modalWindow.container.addClass('alert');
-
-    final acceptBtn = addButton('Accept');
-    if (accept != null) {
-      acceptBtn.on('click', () => Function.apply(accept, [this]));
-    }
+    modalWindow.addClass('alert');
+    addButton('Accept', accept);
   }
 }
