@@ -1,32 +1,38 @@
 
 @import 'compass/css3';
 
+// Settings
+$padding: 6px;
+$bg-color: #fff;
+$header-color: #fff;
+$header-bg-color: #337ab7;
+
 .modal-dialog-container {
-  @include box-shadow(rgba(0, 0, 0, .75) 0 4px 16px 0);
-  background: #fff;
-  border-radius: 8px;
+  @include box-shadow(rgba(0, 0, 0, .75) 0 $padding (4 * $padding) 0);
+  background: $bg-color;
+  border-radius: 2 * $padding;
   margin-top: 48px;
   min-width: 200px;
   overflow: hidden;
 }
 
 .modal-dialog-block {
-  padding: 8px 16px;
+  padding: (2 * $padding) (4 * $padding);
 
   &.header {
-    background-color: #337ab7;
-    color: #fff;
+    background-color: $header-bg-color;
+    color: $header-color;
   }
 
   &.body {
-    padding-top: 16px;
+    padding-top: (4 * $padding);
   }
 
   &.footer {
-    padding-bottom: 12px;
+    padding-bottom: (3 * $padding);
 
     button {
-      margin: 0 4px;
+      margin: 0 $padding;
     }
   }
 }
