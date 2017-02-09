@@ -1,6 +1,10 @@
 part of modal_dialog.dialog.template;
 
-typedef void _Callback(ModalDialog dialog);
+/// Callback function.
+///
+/// This function is called when the user presses any button
+/// from a modal dialog.
+typedef void Callback(ModalDialog dialog);
 
 /// Modal dialog.
 class ModalDialog {
@@ -39,7 +43,7 @@ class ModalDialog {
   /// Adds a button with a [label].
   ///
   /// When the user presses the button, it calls the [action] function.
-  DomElement addButton(String label, [_Callback action]) {
+  DomElement addButton(String label, [Callback action]) {
     final btn = $('<button type="button" />')
       ..text = label
       ..addTo(_footer.element);

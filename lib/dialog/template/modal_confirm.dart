@@ -16,8 +16,7 @@ class ModalConfirm extends ModalAlert {
   ///       cancel: () => print('Do something')
   ///     );
   ///
-  ModalConfirm(String title, String message,
-      {_Callback accept, _Callback cancel})
+  ModalConfirm(String title, String message, {Callback accept, Callback cancel})
       : super(title, message, accept: accept) {
     modalWindow.addClass('confirm');
     addButton('Cancel', cancel);
