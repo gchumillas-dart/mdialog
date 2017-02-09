@@ -1,4 +1,4 @@
-part of modal_dialog;
+part of modal_dialog.dialog;
 
 /// Block inside a modal dialog.
 class ModalBlock {

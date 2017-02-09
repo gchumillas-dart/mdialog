@@ -1,4 +1,4 @@
-part of modal_dialog.dialog;
+part of modal_dialog.dialog.template;
 
 /// Modal confirm dialog.
 class ModalConfirm extends ModalAlert {

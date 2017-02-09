@@ -1,4 +1,4 @@
-part of modal_dialog;
+part of modal_dialog.dialog;
 
 // TODO: reemplazar "modal-window" por algo más complejo para evitar
 /// Modal window.
