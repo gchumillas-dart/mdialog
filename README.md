@@ -1,15 +1,15 @@
 # modal_dialog
 
-A library for Dart developers. It is awesome.
+A minimalist modal dialog system.
 
 ## Usage
 
 A simple usage example:
 
-    import 'package:modal_dialog/modal_dialog.dart';
+    import 'package:modal_dialog/core.dart';
 
     main() {
-      var awesome = new Awesome();
+      alert('It works!');
     }
 
 ## Features and bugs
