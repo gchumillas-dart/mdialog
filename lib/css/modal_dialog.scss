@@ -1,4 +1,5 @@
 .modal-dialog {
+  display: none;
   height: 100%;
   left: 0;
   position: fixed;
@@ -9,5 +10,9 @@
   .modal-dialog-container {
     display: inline-flex;
     flex-direction: column;
+  }
+
+  &.open {
+    display: block;
   }
 }

@@ -20,5 +20,6 @@ class ModalConfirm extends ModalAlert {
       : super(title, message, accept: accept) {
     modalWindow.addClass('confirm');
     addButton('Cancel', cancel);
+    modalWindow.open();
   }
 }

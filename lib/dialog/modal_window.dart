@@ -59,5 +59,12 @@ class ModalWindow {
     _container = $('<div />')
       ..addClass('$_classPrefix-container')
       ..addTo(_element);
+
+    _element.removeClass('open');
+  }
+
+  /// Opens the modal window.
+  void open() {
+    _element.addClass('open');
   }
 }

@@ -18,5 +18,6 @@ class ModalAlert extends ModalDialog {
       : super(title, message) {
     modalWindow.addClass('alert');
     addButton('Accept', accept);
+    modalWindow.open();
   }
 }
