@@ -16,10 +16,14 @@ export 'src/modal_window.dart';
 ///     print("Ok, you've been alerted");
 ///
 Future<Null> alert(String message, {String title}) {
-  final c = new Completer();
+  final c = new Completer<Null>();
 
-  new ModalAlert(title ?? 'Alert', message,
-      accept: () => c.isCompleted || c.complete());
+  new ModalAlert(title ?? 'Alert', message, accept: () {
+    if (c.isCompleted) {
+      c.complete();
+    }
+  });
+
   return c.future;
 }
 
@@ -32,10 +36,17 @@ Future<Null> alert(String message, {String title}) {
 ///     }
 ///
 Future<bool> confirm(String message, {String title}) {
-  final c = new Completer();
+  final c = new Completer<bool>();
 
-  new ModalConfirm(title ?? 'Confirm', message,
-      accept: () => c.isCompleted || c.complete(true),
-      cancel: () => c.isCompleted || c.complete(false));
+  new ModalConfirm(title ?? 'Confirm', message, accept: () {
+    if (c.isCompleted) {
+      c.complete(true);
+    }
+  }, cancel: () {
+    if (c.isCompleted) {
+      c.complete(false);
+    }
+  });
+
   return c.future;
 }
