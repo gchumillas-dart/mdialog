@@ -19,6 +19,8 @@ Future<Null> alert(String message, {String title}) {
     if (!c.isCompleted) {
       c.complete();
     }
+
+    dialog.close();
   });
 
   return c.future;
@@ -39,10 +41,14 @@ Future<bool> confirm(String message, {String title}) {
     if (!c.isCompleted) {
       c.complete(true);
     }
+
+    dialog.close();
   }, cancel: (dialog) {
     if (!c.isCompleted) {
       c.complete(false);
     }
+
+    dialog.close();
   });
 
   return c.future;

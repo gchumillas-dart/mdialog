@@ -50,4 +50,10 @@ class ModalDialog {
 
     return btn;
   }
+
+  /// Closes the modal dialog.
+  void close() {
+    final modalWindow = new ModalWindow();
+    modalWindow.close();
+  }
 }
