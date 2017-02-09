@@ -1,4 +1,4 @@
-import 'package:domelement/core.dart';
+part of modal_dialog;
 
 /// Block inside a modal dialog.
 class ModalBlock {

@@ -1,4 +1,4 @@
-import 'modal_alert.dart';
+part of modal_dialog.dialog;
 
 /// Modal confirm dialog.
 class ModalConfirm extends ModalAlert {

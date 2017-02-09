@@ -1,16 +1,14 @@
-/// Provides a set of modal dialog functions and classes.
+/// Provides a set of functions and classes.
 library modal_dialog;
 
 import 'dart:async';
 
-import 'src/dialog/modal_alert.dart';
-import 'src/dialog/modal_confirm.dart';
+import 'package:domelement/core.dart';
 
-export 'src/dialog/modal_alert.dart';
-export 'src/dialog/modal_confirm.dart';
-export 'src/dialog/modal_dialog.dart';
-export 'src/modal_block.dart';
-export 'src/modal_window.dart';
+import 'dialog/core.dart' show ModalAlert, ModalConfirm;
+
+part 'modal_block.dart';
+part 'modal_window.dart';
 
 /// Shows an alert dialog with a [message] and a [title].
 ///

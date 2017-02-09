@@ -1,4 +1,4 @@
-import 'modal_dialog.dart';
+part of modal_dialog.dialog;
 
 /// Modal alert dialog.
 class ModalAlert extends ModalDialog {

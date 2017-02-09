@@ -1,6 +1,4 @@
-import 'package:domelement/core.dart';
-
-import 'modal_block.dart';
+part of modal_dialog;
 
 // TODO: reemplazar "modal-window" por algo más complejo para evitar
 /// Modal window.

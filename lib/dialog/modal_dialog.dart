@@ -1,6 +1,4 @@
-import 'package:domelement/core.dart';
-import 'package:modal_dialog/src/modal_block.dart';
-import 'package:modal_dialog/src/modal_window.dart';
+part of modal_dialog.dialog;
 
 /// Modal dialog.
 class ModalDialog {
