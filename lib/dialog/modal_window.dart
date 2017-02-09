@@ -1,6 +1,8 @@
 part of modal_dialog.dialog;
 
-// TODO: reemplazar "modal-window" por algo más complejo para evitar
+/// This suffix added to the beggining of the classes.
+final _classPrefix = 'modal-dialog';
+
 /// Modal window.
 class ModalWindow {
   static ModalWindow _instance;
@@ -30,7 +32,7 @@ class ModalWindow {
 
   ModalWindow._internal() {
     _element = $('<div />')
-      ..addClass('modal-window')
+      ..addClass(_classPrefix)
       ..addTo(find('body'));
   }
 
@@ -55,7 +57,7 @@ class ModalWindow {
     }
 
     _container = $('<div />')
-      ..addClass('modal-window-container')
+      ..addClass('$_classPrefix-container')
       ..addTo(_element);
   }
 }

@@ -6,7 +6,7 @@ class ModalBlock {
 
   /// Creates a block with a [className].
   ModalBlock([String className]) {
-    _element = $('<div class="modal-window-block" />');
+    _element = $('<div class="$_classPrefix-block" />');
 
     if (className != null) {
       element.addClass(className);
