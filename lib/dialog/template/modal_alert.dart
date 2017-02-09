@@ -14,7 +14,7 @@ class ModalAlert extends ModalDialog {
   ///       accept: () => print('Do something')
   ///     );
   ///
-  ModalAlert(String title, String message, {_Callback accept})
+  ModalAlert(String title, String message, {Callback accept})
       : super(title, message) {
     modalWindow.addClass('alert');
     addButton('Accept', accept);
