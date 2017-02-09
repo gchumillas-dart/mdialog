@@ -1,4 +1,4 @@
-// Modal dialog sistem.
+/// Modal dialog sistem.
 library modal_dialog.dialog;
 
 import 'package:domelement/core.dart';
