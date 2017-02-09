@@ -5,6 +5,9 @@ import 'dart:async';
 import 'src/dialog/modal_alert.dart';
 import 'src/dialog/modal_confirm.dart';
 
+export 'src/dialog/modal_alert.dart';
+export 'src/dialog/modal_confirm.dart';
+export 'src/dialog/modal_dialog.dart';
 export 'src/modal_block.dart';
 export 'src/modal_window.dart';
 
