@@ -16,7 +16,7 @@ class ModalBlock {
   /// The underlying element of the block.
   DomElement get element => _element;
 
-  /// Block text.
+  /// Inner text.
   String get text => _element.text;
 
   set text(String value) {
