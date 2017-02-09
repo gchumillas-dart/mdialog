@@ -14,13 +14,13 @@ class ModalAlert extends ModalDialog {
   ///       accept: () => print('Do something')
   ///     );
   ///
-  ModalAlert(String title, String message, {Function accept})
+  ModalAlert(String title, String message, {_Callback accept})
       : super(title, message) {
     modalWindow.container.addClass('alert');
 
     final acceptBtn = addButton('Accept');
     if (accept != null) {
-      acceptBtn.on('click', accept);
+      acceptBtn.on('click', () => Function.apply(accept, [this]));
     }
   }
 }

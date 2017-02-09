@@ -1,5 +1,7 @@
 part of modal_dialog.dialog.template;
 
+typedef void _Callback(ModalDialog dialog);
+
 /// Modal dialog.
 class ModalDialog {
   /// Dialog title

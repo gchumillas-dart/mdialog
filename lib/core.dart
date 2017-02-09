@@ -3,7 +3,7 @@ library modal_dialog;
 
 import 'dart:async';
 
-import 'dialog/template/core.dart' show ModalAlert, ModalConfirm;
+import 'dialog/template/core.dart';
 
 /// Shows an alert dialog with a [message] and a [title].
 ///
@@ -15,7 +15,7 @@ import 'dialog/template/core.dart' show ModalAlert, ModalConfirm;
 Future<Null> alert(String message, {String title}) {
   final c = new Completer<Null>();
 
-  new ModalAlert(title ?? 'Alert', message, accept: () {
+  new ModalAlert(title ?? 'Alert', message, accept: (dialog) {
     if (!c.isCompleted) {
       c.complete();
     }
@@ -35,11 +35,11 @@ Future<Null> alert(String message, {String title}) {
 Future<bool> confirm(String message, {String title}) {
   final c = new Completer<bool>();
 
-  new ModalConfirm(title ?? 'Confirm', message, accept: () {
+  new ModalConfirm(title ?? 'Confirm', message, accept: (dialog) {
     if (!c.isCompleted) {
       c.complete(true);
     }
-  }, cancel: () {
+  }, cancel: (dialog) {
     if (!c.isCompleted) {
       c.complete(false);
     }

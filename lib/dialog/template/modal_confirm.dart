@@ -16,13 +16,14 @@ class ModalConfirm extends ModalAlert {
   ///       cancel: () => print('Do something')
   ///     );
   ///
-  ModalConfirm(String title, String message, {Function accept, Function cancel})
+  ModalConfirm(String title, String message,
+      {_Callback accept, Function cancel})
       : super(title, message, accept: accept) {
     modalWindow.container.addClass('confirm');
 
     final cancelBtn = addButton('Cancel');
     if (cancel != null) {
-      cancelBtn.on('click', cancel);
+      cancelBtn.on('click', () => Function.apply(cancel, [this]));
     }
   }
 }
