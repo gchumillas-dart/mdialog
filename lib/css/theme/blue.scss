@@ -1,6 +1,9 @@
+
+@import 'compass/css3';
+
 .modal-dialog-container {
+  @include box-shadow(rgba(0, 0, 0, .75) 0 4px 16px 0);
   background: #fff;
-  border: 1px solid #ddd;
   border-radius: 8px;
   margin-top: 48px;
   min-width: 200px;
