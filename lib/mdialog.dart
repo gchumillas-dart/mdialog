@@ -7,6 +7,8 @@ import 'package:domelement/core.dart';
 
 import 'src/dialogs.dart';
 
+export 'src/dialogs.dart' show ModalDialog;
+
 /// This suffix added to the beggining of the classes.
 final _classPrefix = 'modal-dialog';
 
