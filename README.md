@@ -1,4 +1,4 @@
-# mdialog
+# Modal Dialog System
 
 A minimalist modal dialog system.
 
