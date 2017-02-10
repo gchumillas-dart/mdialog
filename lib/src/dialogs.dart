@@ -46,7 +46,7 @@ class ModalDialog {
   /// Adds a button with a [label].
   ///
   /// When the user presses the button, it calls the [action] function.
-  DomElement addButton(String label, [Callback action]) {
+  DomElement addButton(String label, {Callback action}) {
     final btn = $('<button type="button" />')
       ..text = label
       ..addTo(_footer.element);
@@ -79,8 +79,9 @@ class ModalAlert extends ModalDialog {
   ModalAlert(String title, String message, {Callback accept})
       : super(title, message) {
     modalWindow.addClass('alert');
-    addButton('Accept', accept);
+    final btn = addButton('Accept', action: accept);
     modalWindow.open();
+    btn.nativeElement.focus();
   }
 }
 
@@ -103,7 +104,7 @@ class ModalConfirm extends ModalAlert {
   ModalConfirm(String title, String message, {Callback accept, Callback cancel})
       : super(title, message, accept: accept) {
     modalWindow.addClass('confirm');
-    addButton('Cancel', cancel);
+    addButton('Cancel', action: cancel);
     modalWindow.open();
   }
 }
