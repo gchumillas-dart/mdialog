@@ -1,4 +1,4 @@
-# modal_dialog
+# mdialog
 
 A minimalist modal dialog system.
 
@@ -6,7 +6,7 @@ A minimalist modal dialog system.
 
 A simple usage example:
 
-    import 'package:modal_dialog/core.dart';
+    import 'package:mdialog/core.dart';
 
     main() {
       alert('It works!');

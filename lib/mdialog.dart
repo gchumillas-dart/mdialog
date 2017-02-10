@@ -1,5 +1,5 @@
 /// Provides a set of modal window functions.
-library modal_dialog;
+library mdialog;
 
 import 'dart:async';
 

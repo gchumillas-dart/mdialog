@@ -1,7 +1,7 @@
-library modal_dialog.dialogs;
+library mdialog.dialogs;
 
 import 'package:domelement/core.dart';
-import 'package:modal_dialog/modal_dialog.dart';
+import 'package:mdialog/mdialog.dart';
 
 /// Callback function.
 ///

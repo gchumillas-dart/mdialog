@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:modal_dialog/modal_dialog.dart';
+import 'package:mdialog/mdialog.dart';
 
 Future<Null> main() async {
   await alert('We will proceed to format the Hard Disk');
