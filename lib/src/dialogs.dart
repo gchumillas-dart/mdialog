@@ -1,4 +1,7 @@
-part of modal_dialog.dialog.template;
+library modal_dialog.dialogs;
+
+import 'package:domelement/core.dart';
+import 'package:modal_dialog/modal_dialog.dart';
 
 /// Callback function.
 ///
@@ -57,4 +60,50 @@ class ModalDialog {
 
   /// Closes the modal dialog.
   void close() => _modalWindow.close();
+}
+
+/// Modal alert dialog.
+class ModalAlert extends ModalDialog {
+  /// Creates a modal alert dialog with a [title] and a [message].
+  ///
+  /// When the user presses the `Accept` button, it calls the [accept] function.
+  ///
+  /// Example:
+  ///
+  ///     new ModalAlert(
+  ///       'Error!',
+  ///       'An error has occurred',
+  ///       accept: () => print('Do something')
+  ///     );
+  ///
+  ModalAlert(String title, String message, {Callback accept})
+      : super(title, message) {
+    modalWindow.addClass('alert');
+    addButton('Accept', accept);
+    modalWindow.open();
+  }
+}
+
+/// Modal confirm dialog.
+class ModalConfirm extends ModalAlert {
+  /// Creates a modal confirm dialog with a [title] and a [message].
+  ///
+  /// When the user presses the `Accept` or the `Cancel` button, it calls the
+  /// [accept] or the [cancel] function respectively.
+  ///
+  /// Example:
+  ///
+  ///     new ModalConfirm(
+  ///       'Please confirm',
+  ///       'Do you want to delete the record?',
+  ///       accept: () => print('Deleting record...'),
+  ///       cancel: () => print('Do something')
+  ///     );
+  ///
+  ModalConfirm(String title, String message, {Callback accept, Callback cancel})
+      : super(title, message, accept: accept) {
+    modalWindow.addClass('confirm');
+    addButton('Cancel', cancel);
+    modalWindow.open();
+  }
 }
