@@ -6,18 +6,16 @@ A minimalist modal dialog system.
 
 A simple usage example:
 
-```dart
-import 'package:mdialog/mdialog.dart';
+    import 'package:mdialog/mdialog.dart';
 
-main() async {
-  await alert('We will proceed to format the Hard Disk');
-  print('Ok, you\'ve been alerted');
+    main() async {
+      await alert('We will proceed to format the Hard Disk');
+      print('Ok, you\'ve been alerted');
 
-  if (await confirm('Are you sure?')) {
-    print('Formating Hard Disk ...');
-  }
-}
-```
+      if (await confirm('Are you sure?')) {
+        print('Formating Hard Disk ...');
+      }
+    }
 
 ## Features and bugs
 
