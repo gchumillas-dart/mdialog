@@ -1,4 +1,4 @@
-/// Provides a set of modal window functions.
+/// Provides a set of modal window functions and classes.
 library mdialog;
 
 import 'dart:async';
@@ -63,7 +63,17 @@ Future<bool> confirm(String message, {String title}) {
 class ModalBlock {
   DomElement _element;
 
-  /// Creates a block with a [className].
+  /// Creates a block with a [className] inside a modal dialog.
+  ///
+  /// The following example creates a modal dialog with one buttons:
+  ///
+  ///     final mw = new ModalWindow();
+  ///     mw.add(new ModalBlock('header')..text = 'Alert!');
+  ///     mw.add(new ModalBlock('body')..text = 'An error has occurred');
+  ///     mw.add(new ModalBlock('footer')
+  ///       ..html = '<input type="button" value="Close" />');
+  ///     mw.open();
+  ///
   ModalBlock([String className]) {
     _element = $('<div class="$_classPrefix-block" />');
 
@@ -72,7 +82,10 @@ class ModalBlock {
     }
   }
 
-  /// The underlying element of the block.
+  /// Underlying element of the block.
+  ///
+  /// The following property returns a
+  /// [DomElement](https://pub.dartlang.org/packages/domelement) instance.
   DomElement get element => _element;
 
   /// Inner html.
@@ -101,10 +114,11 @@ class ModalWindow {
 
   /// Creates or gets the modal window instance.
   ///
-  /// The modal window is created only once, so this method returns the
-  /// current instance or creates a new one.
+  /// This class is used in conjunction with the [ModalBlock] class to create
+  /// 'modal dialogs'.
   ///
-  /// Example:
+  /// A 'modal window' contains a single modal dialog and it's created only
+  /// once. For example:
   ///
   ///     final modalWindow1 = new ModalWindow();
   ///     final modalWindow2 = new ModalWindow();
@@ -126,10 +140,10 @@ class ModalWindow {
       ..addTo(find('body'));
   }
 
-  /// The undeerlying element of the window's container.
+  /// Undeerlying element of the window's container.
   DomElement get container => _container;
 
-  /// The underlying element of the window.
+  /// Underlying element of the window.
   DomElement get element => _element;
 
   /// Adds a [block] to the container.
