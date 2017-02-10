@@ -21,4 +21,4 @@ main() async {
 
 ## Features and bugs
 
-Please file feature requests and bugs at the [Issue Tracker](https://github.com/gchumillas-dart/mdialog/issues)
+Please file feature requests and bugs at the [Issue Tracker](https://github.com/gchumillas-dart/mdialog/issues).
