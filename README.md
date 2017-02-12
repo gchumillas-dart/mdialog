@@ -2,9 +2,9 @@
 
 A minimalist modal dialog system.
 
-![alert](https://cloud.githubusercontent.com/assets/5312427/22860349/5ccb9f36-f0fb-11e6-88f1-748e6927019a.png)
+![alert](https://cloud.githubusercontent.com/assets/5312427/22860381/4b6d632c-f0fc-11e6-8331-368fccbf7e33.png)
 
-![confirm](https://cloud.githubusercontent.com/assets/5312427/22860351/69f9c746-f0fb-11e6-87e7-edb0f68263de.png)
+![confirm](https://cloud.githubusercontent.com/assets/5312427/22860382/54acba14-f0fc-11e6-91f3-df3dd920fad1.png)
 
 ## Usage
 
