@@ -4,6 +4,14 @@ A minimalist modal dialog system.
 
 ## Usage
 
+This package contains a basic CSS skin (mdialog.css) and two themes (blue.css and dark.css). Load them from your web page:
+```html
+<html>
+  <title>test</title>
+  <link rel="stylesheet" href="packages/mdialog/css/mdialog.css">
+  <link rel="stylesheet" href="packages/mdialog/css/themes/dark.css">
+```
+
 Example:
 
 ```dart
@@ -19,9 +27,9 @@ main() async {
 }
 ```
 
-## Create custom modal dialogs
+## Create custom dialogs
 
-This library provides two classes to create custom modal dialogs: `ModalWindow` and `ModalBlock`. The following code creates a custom modal dialog interface.
+The library provides two classes to create custom modal dialogs: `ModalWindow` and `ModalBlock`. The following code creates a modal loading interface.
 
 ```dart
 import 'dart:html';
