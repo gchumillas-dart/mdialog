@@ -3,7 +3,6 @@
 A minimalist modal dialog system.
 
 ![alert](https://cloud.githubusercontent.com/assets/5312427/22860381/4b6d632c-f0fc-11e6-8331-368fccbf7e33.png)
-
 ![confirm](https://cloud.githubusercontent.com/assets/5312427/22860382/54acba14-f0fc-11e6-91f3-df3dd920fad1.png)
 
 ## Usage
