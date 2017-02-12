@@ -8,8 +8,8 @@ environment:
   sdk: '>=1.0.0 <2.0.0'
 
 dependencies:
-  domelement: ^0.2.3
-  dart_sass_transformer: ^0.5.0
+  domelement: '>=0.2.3 <0.3.0'
+  dart_sass_transformer: '>=0.5.0 <0.6.0'
 
 transformers:
   - dart_sass_transformer:
