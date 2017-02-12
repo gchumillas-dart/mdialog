@@ -2,6 +2,10 @@
 
 A minimalist modal dialog system.
 
+![alert](https://cloud.githubusercontent.com/assets/5312427/22860349/5ccb9f36-f0fb-11e6-88f1-748e6927019a.png)
+
+![confirm](https://cloud.githubusercontent.com/assets/5312427/22860351/69f9c746-f0fb-11e6-87e7-edb0f68263de.png)
+
 ## Usage
 
 This package contains a basic CSS skin (mdialog.css) and two themes (blue.css and dark.css). Load them from your web page:
