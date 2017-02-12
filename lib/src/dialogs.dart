@@ -77,7 +77,7 @@ class ModalAlert extends ModalDialog {
   ///     );
   ///
   ModalAlert(String title, String message,
-      {Callback accept, String acceptLabel = 'Accept'})
+      {Callback accept, String acceptLabel: 'Accept'})
       : super(title, message) {
     modalWindow.addClass('alert');
     final btn = addButton(acceptLabel, action: accept);
@@ -105,8 +105,8 @@ class ModalConfirm extends ModalAlert {
   ModalConfirm(String title, String message,
       {Callback accept,
       Callback cancel,
-      String acceptLabel = 'Accept',
-      String cancelLabel = 'Cancel'})
+      String acceptLabel: 'Accept',
+      String cancelLabel: 'Cancel'})
       : super(title, message, accept: accept, acceptLabel: acceptLabel) {
     modalWindow.addClass('confirm');
     addButton(cancelLabel, action: cancel);

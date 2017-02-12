@@ -20,7 +20,7 @@ final _classPrefix = 'modal-dialog';
 ///     print("Ok, you've been alerted");
 ///
 Future<Null> alert(String message,
-    {String title, String acceptLabel = 'Accept'}) {
+    {String title, String acceptLabel: 'Accept'}) {
   final c = new Completer<Null>();
 
   new ModalAlert(title ?? 'Alert', message, acceptLabel: acceptLabel,
@@ -45,8 +45,8 @@ Future<Null> alert(String message,
 ///
 Future<bool> confirm(String message,
     {String title,
-    String acceptLabel = 'Accept',
-    String cancelLabel = 'Cancel'}) {
+    String acceptLabel: 'Accept',
+    String cancelLabel: 'Cancel'}) {
   final c = new Completer<bool>();
 
   new ModalConfirm(title ?? 'Confirm', message,
