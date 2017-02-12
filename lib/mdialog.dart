@@ -19,10 +19,12 @@ final _classPrefix = 'modal-dialog';
 ///     await alert('Something went wrong!');
 ///     print("Ok, you've been alerted");
 ///
-Future<Null> alert(String message, {String title}) {
+Future<Null> alert(String message,
+    {String title, String acceptLabel = 'Accept'}) {
   final c = new Completer<Null>();
 
-  new ModalAlert(title ?? 'Alert', message, accept: (dialog) {
+  new ModalAlert(title ?? 'Alert', message, acceptLabel: acceptLabel,
+      accept: (dialog) {
     if (!c.isCompleted) {
       c.complete();
     }
@@ -41,10 +43,14 @@ Future<Null> alert(String message, {String title}) {
 ///       print('Your whishes are my orders');
 ///     }
 ///
-Future<bool> confirm(String message, {String title}) {
+Future<bool> confirm(String message,
+    {String title,
+    String acceptLabel = 'Accept',
+    String cancelLabel = 'Cancel'}) {
   final c = new Completer<bool>();
 
-  new ModalConfirm(title ?? 'Confirm', message, accept: (dialog) {
+  new ModalConfirm(title ?? 'Confirm', message,
+      acceptLabel: acceptLabel, cancelLabel: cancelLabel, accept: (dialog) {
     if (!c.isCompleted) {
       c.complete(true);
     }
