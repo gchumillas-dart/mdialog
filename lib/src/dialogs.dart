@@ -1,5 +1,7 @@
 library mdialog.dialogs;
 
+import 'dart:html';
+
 import 'package:domelement/core.dart';
 import 'package:mdialog/mdialog.dart';
 
@@ -52,7 +54,8 @@ class ModalDialog {
       ..addTo(_footer.element);
 
     if (action != null) {
-      btn.on('click', () => Function.apply(action, [this]));
+      btn.nativeElement.onClick
+          .listen((MouseEvent event) => Function.apply(action, [this]));
     }
 
     return btn;
