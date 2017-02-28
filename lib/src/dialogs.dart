@@ -30,8 +30,8 @@ class ModalDialog {
   ///       'Please confirm',
   ///       'Do you want to remove the record?'
   ///     );
-  ///     dialog.addButton('Accept').on(
-  ///       'click', () => print('Deleting record...')
+  ///     dialog.addButton('Accept').nativeElement.onClick.listen(
+  ///       (_) => print('Deleting record...')
   ///     );
   ///     dialog.addButton('Cancel');
   ///
